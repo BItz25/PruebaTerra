@@ -1,5 +1,5 @@
 def genaralvars () {
-    env.GIT_REPO = 'https://gitlab.com/chaloglez/labsacademia.git'
+    env.GIT_REPO = 'https://github.com/BItz25/PruebaTerra.git'
     env.GIT_BRANCH = 'main'
     env.DOCKER_REPO = 'brendacruz25'
     CONTAINER_PORT= '81'
