@@ -1,10 +1,8 @@
 def genaralvars () {
-
-    env.GIT_REPO = 'https://github.com/BItz25/PruebaTerra.git'
+    env.GIT_REPO = 'https://gitlab.com/chaloglez/labsacademia.git'
     env.GIT_BRANCH = 'main'
     env.DOCKER_REPO = 'brendacruz25'
     CONTAINER_PORT= '81'
-
 }
 
 pipeline {
@@ -14,15 +12,15 @@ pipeline {
     }
     stages {
         stage ("Set Variables") {
-            steps {
+            steps {                
                 genaralvars()
             }
         }
-        stage ("Get Code") {
-            steps {
-                git branch: "${env.GIT_BRANCH}", url: "${env.GIT_REPO}"
-            }
-        }
+        //stage ("Get Code") {
+        //    steps {
+        //        git branch: "${env.GIT_BRANCH}", url: "${env.GIT_REPO}"
+        //    }
+        //}
         stage ("Verify If exist container") {
             steps {
                     script {
@@ -67,4 +65,3 @@ pipeline {
 
     
 }
-
